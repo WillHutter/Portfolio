@@ -13,7 +13,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : William deLone Hutter
 description              : William deLone Hutter - Projects and CV 
-baseurl                  : "/spring-2025-portfolio-wdh64/" # Set this to "portfolio-<your-github-username>" 
+baseurl                  : "/Portfolio/"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 
 # Theme and Style
@@ -37,6 +37,8 @@ collections:
 markdown: kramdown
 kramdown:
   input: GFM
+  math_engine: mathjax
+  
 
 # Plugins (previously gems:)
 plugins:

@@ -1,9 +1,9 @@
 ---
 layout: project
-title: Accumulator Case, Cornell FSAE
-description: Accumulator case for Cornell FSAE ARG25
-technologies: Statics, Sheet Metal, CAD
---- 
+title: Hydrostatic Transaxle Dissection
+description: Disassembpled a hydrostatic transaxle and studdied working fluid mechaisms
+technologies: 
+---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
@@ -22,7 +22,7 @@ technologies: Statics, Sheet Metal, CAD
     pdfjsLib.GlobalWorkerOptions.workerSrc =
       "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-    const url = "{{ '/assets/images/Accumulator_Case.pdf' | relative_url }}";
+    const url = "{{ '/assets/images/Transaxle.pdf' | relative_url }}";
 
     const container = document.getElementById("pdf-container");
     const errBox = document.getElementById("pdf-error");

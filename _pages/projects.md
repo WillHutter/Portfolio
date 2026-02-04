@@ -10,7 +10,7 @@ Below is a selection of my engineering and design projects.
 
 ---
 
-{% for project in site.projects %}
+{% for project in site.projects reversed%}
 
 ## [{{ project.title }}]({{ project.url | relative_url }})
 

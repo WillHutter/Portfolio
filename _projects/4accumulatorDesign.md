@@ -1,9 +1,10 @@
 ---
 layout: project
-title: Accumulator Case, Cornell FSAE
-description: Accumulator case for Cornell FSAE ARG25
-technologies: Statics, Sheet Metal, CAD
+title: Accumulator Design, Cornell FSAE
+description: Laser welded pouch cell battery pack for Cornell FSAE ARG26
+technologies: MATLAB, Laser Welding, ANSYS, CAD, High Voltage, Pouch Cells
 --- 
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
@@ -22,7 +23,7 @@ technologies: Statics, Sheet Metal, CAD
     pdfjsLib.GlobalWorkerOptions.workerSrc =
       "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-    const url = "{{ '/assets/images/Accumulator_Case.pdf' | relative_url }}";
+    const url = "{{ '/assets/images/Accumulator.pdf' | relative_url }}";
 
     const container = document.getElementById("pdf-container");
     const errBox = document.getElementById("pdf-error");

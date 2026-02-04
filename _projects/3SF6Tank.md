@@ -1,9 +1,10 @@
 ---
 layout: project
-title: Accumulator Case, Cornell FSAE
-description: Accumulator case for Cornell FSAE ARG25
-technologies: Statics, Sheet Metal, CAD
---- 
+title: Electron Gun Power Supply Tank, Xelera Research
+description: Tanks to prevent 360kV power supply and 50MΩ resistor from arcing under operation with SF₆ gas
+technologies: Strucatural Design, FEA, Vacuum Systems, Electromechanical Integration, GD&T, CAM, Manual Machining
+image: /assets/images/SF6_Overview.png
+---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
@@ -22,7 +23,7 @@ technologies: Statics, Sheet Metal, CAD
     pdfjsLib.GlobalWorkerOptions.workerSrc =
       "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-    const url = "{{ '/assets/images/Accumulator_Case.pdf' | relative_url }}";
+    const url = "{{ '/assets/images/SF6_Tank.pdf' | relative_url }}";
 
     const container = document.getElementById("pdf-container");
     const errBox = document.getElementById("pdf-error");

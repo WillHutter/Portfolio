@@ -1,6 +1,6 @@
 // Default to light theme
 $primary-color: #3a3f58;
-$background-color: #f7f8fa;
+$background-color: #ffffff;//#f7f8fa;
 $text-color: #333;
 
 // Set theme colors based on the color_scheme variable
@@ -26,6 +26,16 @@ $text-color: #333;
 
 h1 {
   margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  padding-bottom: 0;   /* remove spacing from underline */
+  border-bottom: none; /* remove line */
 }
 
 body {
@@ -123,6 +133,104 @@ footer {
     @extend .inline-image;
     float: right;
     margin-right: 0;
+  }
+
+  &-c {
+    @extend .inline-image;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+
+
+.image-stack {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  align-items: start;
+  margin: 1rem 0;
+}
+
+.image-stack .left {
+  grid-column: 1;
+}
+
+.image-stack .right {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-stack figure {
+  margin: 0;       // kills the default 40px indent
+  padding: 0;
+}
+
+.image-stack figcaption {
+  margin: 6px 0 0 0;  // small space above caption only
+  padding: 0;
+}
+
+
+/* Responsive fallback */
+@media (max-width: 700px) {
+  .image-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .image-stack .right {
+    flex-direction: column;
+  }
+}
+
+// --- Figure wrapper so caption stays attached to image ---
+figure.fig {
+  display: inline-block;   // treat image+caption as one unit
+  margin: 0px 25px 15px 25px;
+  vertical-align: top;
+  max-width: 350px;        // match .inline-image max-width
+}
+
+figure.fig img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;      // match your other images
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figure.fig figcaption {
+  font-size: 0.85rem;     /* relative to root <html>, not image */
+  line-height: 1.35;
+  margin-top: 6px;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 400;
+  max-width: 100%;
+}
+
+
+
+// Float variants that mirror your -l / -r behavior
+figure.fig.inline-image-l {
+  float: left;
+  margin-left: 0;
+}
+
+figure.fig.inline-image-r {
+  float: right;
+  margin-right: 0;
+}
+
+// On small screens, drop floats so layout doesn't separate items
+@media (max-width: 700px) {
+  figure.fig.inline-image-l,
+  figure.fig.inline-image-r {
+    float: none;
+    max-width: 100%;
+    margin: 15px 0;
   }
 }
 
