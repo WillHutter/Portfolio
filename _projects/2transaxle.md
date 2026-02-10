@@ -2,7 +2,7 @@
 layout: project
 title: Hydrostatic Transaxle Dissection
 description: Disassembpled a hydrostatic transaxle and studdied working fluid mechaisms
-technologies: 
+technologies: Fluid mechanics, CAD, power tools
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
